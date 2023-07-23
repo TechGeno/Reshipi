@@ -52,5 +52,12 @@ color:#F23005
 
 .figure img {
     display:block;
-    max-width: 100%;
+    max-width: 200%;
+    max-height: 75%;
+}
+
+.cocarousel-item img{
+    height:700px;
+    width:900px;
+    object-fit: fill;
 }
