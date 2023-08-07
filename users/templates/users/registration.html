@@ -13,37 +13,44 @@
 
     <form method="post" novalidate>
         {% csrf_token %}
-        <h3>Register</h3>
-        {% load widget_tweaks %}
-        {% for field in form.visible_fields %}
-        <div class="row">
-            <div class="col">
-                <label for="{{field.id_for_label}}" class="form-label">{{field.label_tag}}</label>
-                {% if form.is_bound %}
-                    {% if field.errors %}
-                        {% render_field field class="form-control is-invalid" %}
-                        {% for error in field.errors %}
-                            <div class="invalid-feedback">
-                                {{ error }}
-                            </div>
-                        {% endfor %}
-                    {% else %}
-                         {% render_field field class="form-control" %}
-                    {% endif %}
-                {% else %}
-                    {% render_field field class="form-control" %}
-                {% endif %}
-                {% if field.help_text %}
-                    <small class="form-text text-muted">{{ field.help_text }}</small>
-                {% endif %}
+        <div class="card">
+            <div class="card-body">
+                <h3 class="font-weight-bold font-italic">CREATE YOUR ACCOUNT</h3>
+                {% load widget_tweaks %}
+                {% for field in form.visible_fields %}
+                <div class="row">
+                    <div class="col">
+                        <label for="{{field.id_for_label}}" class="form-label ">{{field.label_tag}}</label>
+                        {% if form.is_bound %}
+                            {% if field.errors %}
+                                {% render_field field class="form-control is-invalid" %}
+                                {% for error in field.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                 {% render_field field class="form-control" %}
+                            {% endif %}
+                        {% else %}
+                            {% render_field field class="form-control" %}
+                        {% endif %}
+                        {% if field.help_text %}
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">CREATE</button>
+                </div>
             </div>
         </div>
-        {% endfor %}
-       <button type="submit" class="btn btn-primary">Submit</button>
 
 
 
     </form>
+    
 </div>
 </body>
 </html>
