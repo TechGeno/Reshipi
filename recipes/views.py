@@ -5,7 +5,6 @@ from users.models import Profile
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.utils.decorators import method_decorator
-#
 from django.shortcuts import get_object_or_404
 
 
@@ -13,18 +12,17 @@ from django.shortcuts import get_object_or_404
 @method_decorator(login_required(login_url='login'), name='dispatch')
 class CreateRecipe(TemplateView):
     form_class = CreateRecipeForm
+    context = {}
     template_name = 'recipes/createrecipe.html'
-    context ={}
-    
-    #in get request 
+
     def get(self,request,*args,**kwargs):
         user = request.user
         self.context['form'] =self.form_class(initial={'created_by': user})
         return render(request,self.template_name, self.context)
-    #post request
+
     def post(self,request,*args,**kwargs):
         form = self.form_class(data=request.POST,files=request.FILES)
-        if form.is_valid():
+        if form.is_valid    ():
             form.save()
             return redirect('viewprofile')
         else:
@@ -42,7 +40,6 @@ class ViewRecipe(TemplateView):
         obj = get_object_or_404(recipe,pk=id)
         self.context['obj'] = obj
         user = request.user.id
-        #Check if user exits , else render to creat profile
         if user:
             try:
                 profile = Profile.objects.get(user=user)
@@ -69,7 +66,6 @@ class EditRecipe(TemplateView):
     def post(self,request,*args,**kwargs):
         id = kwargs.get('id')
         recipes = get_object_or_404(recipe, pk=id)
-        #handle file uploads
         form = self.form_class(instance=recipes,data=request.POST,files=request.FILES)
         if form.is_valid():
             form.save()

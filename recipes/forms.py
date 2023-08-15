@@ -6,12 +6,5 @@ class CreateRecipeForm(ModelForm):
     class Meta:
         model = recipe
         fields = "__all__"
-        widgets = {'ingredient':forms.Textarea(attrs={
-                    'placeholder':'Enter ingredients',
-                    }),
-                   'How_to_make':forms.Textarea(attrs={
-                       'placeholder':'Enter the recipe'
-                   
-                   }),
-                   'created_by':forms.HiddenInput()
-                   }
+        widgets = {'ingredient':forms.Textarea(),'How_to_make':forms.Textarea(),
+                   'created_by':forms.HiddenInput()}
