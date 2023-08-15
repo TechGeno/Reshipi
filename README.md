@@ -15,16 +15,31 @@ User Authentication: Securely register, log in, and manage your profile. Enjoy a
 ![Screenshot (505)](https://github.com/TechGeno/Reshipi/assets/99545486/f4f5d3f4-e969-47b9-af5d-f7bd02b82da1)
 ![Screenshot (497)](https://github.com/TechGeno/Reshipi/assets/99545486/12df6eaa-51fe-40e5-b9e4-c6e39cc2177c)
 
+
+
+
+
 User Profiles: Customize your profile with a profile picture, bio, and showcase your favorite recipes and creations.
 ![Screenshot (496)](https://github.com/TechGeno/Reshipi/assets/99545486/e381c9c0-81ff-4633-b231-9d641fe8f85a)
+
+
+
+
 
 CRUD Functionality: Create, read, update, and delete recipes effortlessly. Share your culinary creations with the community or modify them as your skills evolve.
 ![Screenshot (500)](https://github.com/TechGeno/Reshipi/assets/99545486/d7f90f8d-6a23-44a8-a6df-567bbd438371)
 ![Screenshot (501)](https://github.com/TechGeno/Reshipi/assets/99545486/65149d45-f076-4cc3-8310-57d97865b112)
 ![Screenshot (502)](https://github.com/TechGeno/Reshipi/assets/99545486/b691d6e6-57c0-44c8-9a18-1c0110f48fc9)
 
+
+
+
+
 Beautiful Visuals: Feast your eyes on high-quality images of each recipe, making the browsing experience visually appealing and inspiring.
 ![Screenshot (503)](https://github.com/TechGeno/Reshipi/assets/99545486/86f28e63-dfe2-4ba1-8b49-70872d30a5cb)
+
+
+
 
 
 Admin Panel: Manage the application efficiently with an admin panel that allows moderation, user management, and content control.
