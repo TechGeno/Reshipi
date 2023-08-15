@@ -141,7 +141,3 @@ class EditProfile(TemplateView):
             return redirect('viewprofile')
         else:
             return render(request, self.template_name, self.context)
-
-
-
-

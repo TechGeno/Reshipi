@@ -18,10 +18,10 @@ class UserRegistrationForm(UserCreationForm):
         try:
             object = User.objects.get(email=email)
             if (object):
-                msg = "Email is already registered"
+                msg = "email already exists"
                 self.add_error('email',msg)
 
-        except:
+        except Exception as e:
             pass
 
 
@@ -35,10 +35,7 @@ class CreateProfileForm(ModelForm):
     class Meta:
         model = Profile
         fields = ['user','profile_pic','bio','birth_date']
-        widgets = {'birth_date':forms.DateInput({
-            'placeholder':'Enter date in YYYY-MM-DD'
-            }),
-            'user':forms.HiddenInput()
+        widgets = {'birth_date':forms.DateInput(),'user':forms.HiddenInput()
         }
 
 
