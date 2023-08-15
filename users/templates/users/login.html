@@ -6,37 +6,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'users/css/registration.css' %}">
+    <link rel="stylesheet" href="{% static 'users/css/main.css' %}">
 </head>
 <body>
-<div class="container">
+<div class="container" style="padding-top: 150px;">
     <form method="post" novalidate>
         {%csrf_token%}
-        <div class="card">
+        <div class="card"">
             <div class="card-body">
-                <h3 class="font-weight-bold font-italic">LOGIN</h3>
+                <h3 style="font-weight: bold ;">login</h3>
                 {% include 'home/form.html' with form=form %}
                 <br>
-                <div class="row mb-4">
-                    <div class="col d-flex justify-content-center">
-                      <!-- Checkbox -->
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                        <label class="form-check-label" for="form2Example31"> Remember me </label>
-                      </div>
-                      <div class="col">
-                        <!-- Simple link -->
-                        <a href="#!">Forgot password?</a>
-                      </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-                <div class="text-center">
-                    <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
-                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                    Not Registered Yet?
+                <a href="{% url 'register' %}">Register Here</a>
             </div>
           </div>
-
-         <!-- Submit button -->
     </form>
 </div>
 </body>
