@@ -11,10 +11,14 @@
 <div class="container">
     <form method="post" novalidate enctype="multipart/form-data">
         {% csrf_token %}
-        <h3>Create Recipe</h3>
-        {% include 'home/form.html' with form=form %}
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="card">
+            <div class="card-body">
+                <h3 style="font-weight: bold;">Create Recipe</h3>
+                {% include 'home/form.html' with form=form %}
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
     </form>
 </div>
 
