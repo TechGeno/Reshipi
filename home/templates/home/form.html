@@ -13,7 +13,7 @@
         {% for field in form.visible_fields %}
         <div class="row">
             <div class="col">
-                <label for="{{field.id_for_label}}" class="form-label">{{field.label}}</label>
+              <label for="{{field.id_for_label}}" class="form-label" style="color: #758b9f;">{{field.label}}</label>
                 {% if form.is_bound %}
                     {% if field.errors %}
                         {% render_field field class="form-control is-invalid" %}
