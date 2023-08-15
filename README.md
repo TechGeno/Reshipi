@@ -12,7 +12,7 @@ immersive recipe-sharing experience."
 User Authentication: Securely register, log in, and manage your profile. Enjoy a personalized experience with saved recipes.
 
 ![Screenshot (495)](https://github.com/TechGeno/Reshipi/assets/99545486/2729f8b2-47f9-4dc8-8f5f-48d89933d332)
-![Screenshot (496)](https://github.com/TechGeno/Reshipi/assets/99545486/0fc9708e-c379-45e3-af4a-fecfb032b012)
+![Screenshot (505)](https://github.com/TechGeno/Reshipi/assets/99545486/f4f5d3f4-e969-47b9-af5d-f7bd02b82da1)
 ![Screenshot (497)](https://github.com/TechGeno/Reshipi/assets/99545486/12df6eaa-51fe-40e5-b9e4-c6e39cc2177c)
 
 User Profiles: Customize your profile with a profile picture, bio, and showcase your favorite recipes and creations.
