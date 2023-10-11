@@ -60,11 +60,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# CSRF_TRUSTED_ORIGINS = [
-#     f'https://reshipi-production-f{PORT}.up.railway.app',
-#     f'https://reshipi-production.up.railway.app',
-#     'https://reshipi-production.up.railway.app'
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    f'https://reshipi-production-f{PORT}.up.railway.app',
+    f'https://reshipi-production.up.railway.app',
+    'https://reshipi-production.up.railway.app'
+]
 
 ROOT_URLCONF = 'reshipi.urls'
 
