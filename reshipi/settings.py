@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+PORT = os.environ.get('PORT', '5432')
 CSRF_TRUSTED_ORIGINS = [
     f'https://reshipi-production-f{PORT}.up.railway.app',
     f'https://reshipi-production.up.railway.app',
