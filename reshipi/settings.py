@@ -98,7 +98,7 @@ DATABASES = {
         'USER': config("dbuser"),
         'HOST': config("dbhost"),
         'PORT': config("dbport"),
-        'OPTIONS':{"sslmode":"require"}
+        # 'OPTIONS':{"sslmode":"require"}
     }
 }
 
