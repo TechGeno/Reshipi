@@ -90,19 +90,9 @@ WSGI_APPLICATION = 'reshipi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'recipes',
-#         'HOST': '127.0.0.1',
-#         'PORT': 3306,
-#         'USER': 'Project',
-#         'PASSWORD': 'baLaji$123',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': config("engine"),
         'NAME': config("dbname"),
         'PASSWORD': config("dbpass"),
         'USER': config("dbuser"),
