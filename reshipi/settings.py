@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from decouple import config
 from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,7 +30,7 @@ SECRET_KEY = 'uor&igy$iw-$g)#_s&2o5lwb^u+jpt7qwc*l())=eep#xmhn9^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -59,6 +60,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+# CSRF_TRUSTED_ORIGINS = [
+#     f'https://reshipi-production-f{PORT}.up.railway.app',
+#     f'https://reshipi-production.up.railway.app',
+#     'https://reshipi-production.up.railway.app'
+# ]
 
 ROOT_URLCONF = 'reshipi.urls'
 
@@ -84,14 +90,25 @@ WSGI_APPLICATION = 'reshipi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'recipes',
+#         'HOST': '127.0.0.1',
+#         'PORT': 3306,
+#         'USER': 'Project',
+#         'PASSWORD': 'baLaji$123',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'recipes',
-        'HOST': '127.0.0.1',
-        'PORT': 3306,
-        'USER': 'Project',
-        'PASSWORD': 'baLaji$123',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config("dbname"),
+        'PASSWORD': config("dbpass"),
+        'USER': config("dbuser"),
+        'HOST': config("dbhost"),
+        'PORT': config("dbport"),
+        'OPTIONS':{"sslmode":"require"}
     }
 }
 
