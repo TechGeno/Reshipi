@@ -1,1 +1,1 @@
-web: python manage.py migrate && python manage.py collectstatic && gunicorn reshipi.wsgi -b :$PORT
+web: python manage.py migrate && gunicorn reshipi.wsgi -b :$PORT
