@@ -12,3 +12,4 @@ sqlparse==0.4.4
 psycopg2-binary
 Pillow==10.0.1
 whitenoise==6.5.0
+pip
