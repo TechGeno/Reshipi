@@ -25,10 +25,10 @@ TEMPLATE_DIR = Path.joinpath(BASE_DIR,'templates')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'uor&igy$iw-$g)#_s&2o5lwb^u+jpt7qwc*l())=eep#xmhn9^'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = ['*']
 
@@ -64,7 +64,8 @@ PORT = os.environ.get('PORT', '5432')
 CSRF_TRUSTED_ORIGINS = [
     f'https://reshipi-production-f{PORT}.up.railway.app',
     f'https://reshipi-production.up.railway.app',
-    'https://reshipi-production.up.railway.app'
+    'https://reshipi-production.up.railway.app',
+    'https://reshipi-5knh.onrender.com'
 ]
 
 ROOT_URLCONF = 'reshipi.urls'
@@ -93,12 +94,12 @@ WSGI_APPLICATION = 'reshipi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config("engine"),
-        'NAME': config("dbname"),
-        'PASSWORD': config("dbpass"),
-        'USER': config("dbuser"),
-        'HOST': config("dbhost"),
-        'PORT': config("dbport"),
+        'ENGINE': os.environ.get("engine"),
+        'NAME': os.environ.get("dbname"),
+        'PASSWORD': os.environ.get("dbpass"),
+        'USER': os.environ.get("dbuser"),
+        'HOST': os.environ.get("dbhost"),
+        'PORT': os.environ.get("dbport"),
         # 'OPTIONS':{"sslmode":"require"}
     }
 }
